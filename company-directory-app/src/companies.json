@@ -1,0 +1,249 @@
+[
+  {
+    "id": 1,
+    "name": "Innovatech Solutions",
+    "industry": "Technology",
+    "location": "San Francisco, CA",
+    "domain": "innovatech.com"
+  },
+  {
+    "id": 2,
+    "name": "HealthBridge Medical",
+    "industry": "Healthcare",
+    "location": "Boston, MA",
+    "domain": "healthbridge.com"
+  },
+  {
+    "id": 3,
+    "name": "QuantumLeap Finance",
+    "industry": "Finance",
+    "location": "New York, NY",
+    "domain": "qlfinance.com"
+  },
+  {
+    "id": 4,
+    "name": "EcoPlanet Ventures",
+    "industry": "Sustainability",
+    "location": "Austin, TX",
+    "domain": "ecoplanet.com"
+  },
+  {
+    "id": 5,
+    "name": "DataSphere Analytics",
+    "industry": "Technology",
+    "location": "Seattle, WA",
+    "domain": "datasphere.ai"
+  },
+  {
+    "id": 6,
+    "name": "BioGen Innovations",
+    "industry": "Healthcare",
+    "location": "San Diego, CA",
+    "domain": "biogen.com"
+  },
+  {
+    "id": 7,
+    "name": "CapitalTrust Bank",
+    "industry": "Finance",
+    "location": "Chicago, IL",
+    "domain": "capitaltrust.com"
+  },
+  {
+    "id": 8,
+    "name": "GreenShift Energy",
+    "industry": "Sustainability",
+    "location": "Denver, CO",
+    "domain": "greenshift.com"
+  },
+  {
+    "id": 9,
+    "name": "NextGen Robotics",
+    "industry": "Technology",
+    "location": "Pittsburgh, PA",
+    "domain": "nextgenrobotics.com"
+  },
+  {
+    "id": 10,
+    "name": "CareWell Clinics",
+    "industry": "Healthcare",
+    "location": "Miami, FL",
+    "domain": "carewell.com"
+  },
+  {
+    "id": 11,
+    "name": "Vertex Investments",
+    "industry": "Finance",
+    "location": "New York, NY",
+    "domain": "vertexinvest.com"
+  },
+  {
+    "id": 12,
+    "name": "FutureWave Tech",
+    "industry": "Technology",
+    "location": "Austin, TX",
+    "domain": "futurewave.com"
+  },
+  
+  {
+    "id": 13,
+    "name": "Tata Consultancy Services",
+    "industry": "Technology",
+    "location": "Mumbai, MH",
+    "domain": "tcs.com"
+  },
+  {
+    "id": 14,
+    "name": "Reliance Industries",
+    "industry": "Conglomerate",
+    "location": "Mumbai, MH",
+    "domain": "ril.com"
+  },
+  {
+    "id": 15,
+    "name": "Infosys",
+    "industry": "Technology",
+    "location": "Bengaluru, KA",
+    "domain": "infosys.com"
+  },
+  {
+    "id": 16,
+    "name": "HDFC Bank",
+    "industry": "Finance",
+    "location": "Mumbai, MH",
+    "domain": "hdfcbank.com"
+  },
+  {
+    "id": 17,
+    "name": "Wipro",
+    "industry": "Technology",
+    "location": "Bengaluru, KA",
+    "domain": "wipro.com"
+  },
+  {
+    "id": 18,
+    "name": "ICICI Bank",
+    "industry": "Finance",
+    "location": "Mumbai, MH",
+    "domain": "icicibank.com"
+  },
+  {
+    "id": 19,
+    "name": "Sun Pharmaceutical",
+    "industry": "Healthcare",
+    "location": "Mumbai, MH",
+    "domain": "sunpharma.com"
+  },
+  {
+    "id": 20,
+    "name": "Tata Motors",
+    "industry": "Automotive",
+    "location": "Mumbai, MH",
+    "domain": "tatamotors.com"
+  },
+  {
+    "id": 21,
+    "name": "Flipkart",
+    "industry": "E-commerce",
+    "location": "Bengaluru, KA",
+    "domain": "flipkart.com"
+  },
+  {
+    "id": 22,
+    "name": "Zomato",
+    "industry": "Food Tech",
+    "location": "Gurugram, HR",
+    "domain": "zomato.com"
+  },
+  {
+    "id": 23,
+    "name": "Paytm",
+    "industry": "Finance",
+    "location": "Noida, UP",
+    "domain": "paytm.com"
+  },
+  {
+    "id": 24,
+    "name": "Cipla",
+    "industry": "Healthcare",
+    "location": "Mumbai, MH",
+    "domain": "cipla.com"
+  },
+  {
+    "id": 25,
+    "name": "Adani Green Energy",
+    "industry": "Sustainability",
+    "location": "Ahmedabad, GJ",
+    "domain": "adanigreenenergy.com"
+  },
+  {
+    "id": 26,
+    "name": "Mahindra & Mahindra",
+    "industry": "Automotive",
+    "location": "Mumbai, MH",
+    "domain": "mahindra.com"
+  },
+  {
+    "id": 27,
+    "name": "Zerodha",
+    "industry": "Finance",
+    "location": "Bengaluru, KA",
+    "domain": "zerodha.com"
+  },
+  {
+    "id": 28,
+    "name": "Dr. Reddy's Laboratories",
+    "industry": "Healthcare",
+    "location": "Hyderabad, TS",
+    "domain": "drreddys.com"
+  },
+  {
+    "id": 29,
+    "name": "Swiggy",
+    "industry": "Food Tech",
+    "location": "Bengaluru, KA",
+    "domain": "swiggy.com"
+  },
+  {
+    "id": 30,
+    "name": "Tata Power Solar",
+    "industry": "Sustainability",
+    "location": "Mumbai, MH",
+    "domain": "tatapowersolar.com"
+  },
+  {
+    "id": 31,
+    "name": "Hindustan Unilever",
+    "industry": "FMCG",
+    "location": "Mumbai, MH",
+    "domain": "hul.co.in"
+  },
+  {
+    "id": 32,
+    "name": "ITC Limited",
+    "industry": "FMCG",
+    "location": "Kolkata, WB",
+    "domain": "itcportal.com"
+  },
+  {
+    "id": 33,
+    "name": "Ola Cabs",
+    "industry": "Mobility",
+    "location": "Bengaluru, KA",
+    "domain": "olacabs.com"
+  },
+  {
+    "id": 34,
+    "name": "Apollo Hospitals",
+    "industry": "Healthcare",
+    "location": "Chennai, TN",
+    "domain": "apollohospitals.com"
+  },
+  {
+    "id": 35,
+    "name": "Zoho Corporation",
+    "industry": "Technology",
+    "location": "Chennai, TN",
+    "domain": "zohocorp.com"
+  }
+]
+
