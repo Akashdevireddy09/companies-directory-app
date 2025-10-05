@@ -40,6 +40,7 @@
 // export default FilterControls;
 
 import React from 'react';
+import { notifications } from '../utils/notifications';
 
 const FilterControls = ({
   searchTerm,
@@ -51,6 +52,14 @@ const FilterControls = ({
   industries,
   locations
 }) => {
+  const clearAllFilters = () => {
+    setSearchTerm('');
+    setIndustryFilter('');
+    setLocationFilter('');
+    notifications.filter.cleared();
+  };
+  
+  const hasActiveFilters = searchTerm || industryFilter || locationFilter;
   return (
     <div className="filter-controls">
       <input
@@ -70,6 +79,11 @@ const FilterControls = ({
           <option value="">All Locations</option>
           {locations.map(loc => <option key={loc} value={loc}>{loc}</option>)}
         </select>
+        {hasActiveFilters && (
+          <button onClick={clearAllFilters} className="clear-filters-btn">
+            Clear Filters
+          </button>
+        )}
       </div>
     </div>
   );

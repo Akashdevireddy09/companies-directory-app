@@ -1,29 +1,17 @@
-// import React from 'react';
-
-// const CompanyCard = ({ company }) => {
-//   return (
-//     <div className="company-card">
-//       <h3>{company.name}</h3>
-//       <p>{company.description}</p>
-//       <div className="company-details">
-//         <span className="industry">{company.industry}</span>
-//         <span className="location">{company.location}</span>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CompanyCard;
 
 import React from 'react';
+import { notifications } from '../utils/notifications';
 
 const CompanyCard = ({ company }) => {
   const handleVisit = () => {
     if (company.domain) {
       const url = company.domain.startsWith('http') 
-        ? company.website 
+        ? company.domain 
         : `https://${company.domain}`;
+      notifications.company.visited(company.name);
       window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      notifications.company.noWebsite(company.name);
     }
   };
 
@@ -39,14 +27,21 @@ const CompanyCard = ({ company }) => {
       <p className="company-industry">{company.industry}</p>
       <p className="company-location">{company.location}</p>
       {company.domain && (
-        <a 
-      href={`https://${company.domain}`} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="visit-btn"
-    >
-      Visit Website
-    </a>
+        <button 
+          onClick={handleVisit}
+          className="visit-btn"
+        >
+          Visit Website
+        </button>
+      )}
+      {!company.domain && (
+        <button 
+          onClick={handleVisit}
+          className="visit-btn disabled"
+          disabled
+        >
+          No Website
+        </button>
       )}
     </div>
   );

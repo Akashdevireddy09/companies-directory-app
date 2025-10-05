@@ -7,6 +7,10 @@
   --accent-color: #4f46e5;
   --border-color: #e2e8f0;
   --shadow-color: rgba(0, 0, 0, 0.05);
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
 }
 
 body {
@@ -47,17 +51,65 @@ body {
 .app-header {
   text-align: center;
   margin-bottom: 2.5rem;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.header-text {
+  text-align: left;
 }
 
 .app-header h1 {
   font-size: 2.5rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .app-header p {
   font-size: 1.1rem;
   color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive header design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+  
+  .app-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
 }
 
 .app-footer {
@@ -105,14 +157,33 @@ body {
   cursor: pointer;
 }
 
+.clear-filters-btn {
+  padding: 0.75rem 1rem;
+  background-color: var(--error-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
 /* --- Company Grid & Cards --- */
 .company-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
 .company-card {
+  width:220px;
   background-color: var(--card-bg);
   border-radius: 12px;
   padding: 1rem;
@@ -155,6 +226,38 @@ body {
 .company-location {
   color: var(--text-secondary);
   font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.visit-btn {
+  width: 150px;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.visit-btn:hover:not(:disabled) {
+  background-color: #3b38d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  color:white;
+}
+
+.visit-btn:disabled,
+.visit-btn.disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
 }
 
 /* --- Loading, Error & No Results States --- */
@@ -174,34 +277,6 @@ body {
   animation: spin 1s ease infinite;
 }
 
-.visit-btn {
-  /* Basic Setup */
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 10px 24px;
-  border-radius: 8px;
-  margin-top: 16px; /* Add some space above the button */
-  
-  /* Colors & Border */
-  background-color: transparent;
-  color: #4A5568; /* A nice, modern grey */
-  border: 2px solid #E2E8F0; /* A light grey border */
-
-  /* Smooth Transition for Hover Effect */
-  transition: all 0.3s ease;
-}
-
-/* --- Hover & Focus Effect --- */
-.visit-btn:hover, .visit-btn:focus {
-  background-color: #4A5568;
-  color: #fff;
-  border-color: #4A5568;
-  transform: translateY(-3px); /* Lifts the button slightly */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  outline: none; /* Removes default focus outline */
-}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -232,6 +307,23 @@ body {
     padding: 6px 12px;
   }
 }
+
+/* Tablet - 2 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content:center;
+  }
+}
+
+/* Large tablet - 3 columns */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop - 4 columns (default already set above) */
 
 @media (min-width: 768px) {
   .filter-controls {
@@ -337,4 +429,82 @@ body {
 .pagination-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* --- React Toastify Custom Styles --- */
+/* Override react-toastify styles to match app design */
+.Toastify__toast-container {
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  min-width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+.Toastify__toast--success {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.Toastify__toast--error {
+  background-color: var(--error-color);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.Toastify__toast--warning {
+  background-color: var(--warning-color);
+  color: white;
+  border-color: var(--warning-color);
+}
+
+.Toastify__toast--info {
+  background-color: var(--info-color);
+  color: white;
+  border-color: var(--info-color);
+}
+
+.Toastify__toast--loading {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.Toastify__close-button {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive notifications */
+@media (max-width: 768px) {
+  .Toastify__toast-container {
+    left: 10px;
+    right: 10px;
+    margin: 0;
+    max-width: none;
+  }
+  
+  .Toastify__toast {
+    min-width: auto;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
 }
