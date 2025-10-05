@@ -15,6 +15,15 @@ const CompanyCard = ({ company }) => {
     }
   };
 
+  const handleCareerPageVisit = () => {
+    if (company.careerPage) {
+      notifications.success(`Opening ${company.name} careers page...`);
+      window.open(company.careerPage, '_blank', 'noopener,noreferrer');
+    } else {
+      notifications.warning(`${company.name} doesn't have a careers page available`);
+    }
+  };
+
   return (
     <div className="company-card">
       <img 
@@ -26,23 +35,44 @@ const CompanyCard = ({ company }) => {
       <h3 className="company-name">{company.name}</h3>
       <p className="company-industry">{company.industry}</p>
       <p className="company-location">{company.location}</p>
-      {company.domain && (
-        <button 
-          onClick={handleVisit}
-          className="visit-btn"
-        >
-          Visit Website
-        </button>
+      
+      {/* Founded Year with low priority appearance */}
+      {company.foundedYear && (
+        <p className="company-founded-year">Est. {company.foundedYear}</p>
       )}
-      {!company.domain && (
-        <button 
-          onClick={handleVisit}
-          className="visit-btn disabled"
-          disabled
-        >
-          No Website
-        </button>
-      )}
+      
+      {/* Button container for proper layout */}
+      <div className="button-container">
+        {company.domain && (
+          <button 
+            onClick={handleVisit}
+            className="visit-btn"
+            title={`Visit ${company.name} website`}
+          >
+            Visit Website
+          </button>
+        )}
+        
+        {company.careerPage && (
+          <button 
+            onClick={handleCareerPageVisit}
+            className="career-btn"
+            title={`View careers at ${company.name}`}
+          >
+            Careers
+          </button>
+        )}
+        
+        {!company.domain && !company.careerPage && (
+          <button 
+            className="visit-btn disabled"
+            disabled
+            title="No website or careers page available"
+          >
+            No Links Available
+          </button>
+        )}
+      </div>
     </div>
   );
 };

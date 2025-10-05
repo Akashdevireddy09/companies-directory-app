@@ -148,13 +148,6 @@
     "domain": "flipkart.com"
   },
   {
-    "id": 36,
-    "name": "Amazon",
-    "industry": "E-commerce",
-    "location": "Gurugram, HR",
-    "domain": "amazon.com"
-  },
-  {
     "id": 22,
     "name": "Zomato",
     "industry": "Food Tech",
@@ -251,6 +244,374 @@
     "industry": "Technology",
     "location": "Chennai, TN",
     "domain": "zohocorp.com"
+  },
+  {
+    "id": 36,
+    "name": "Amazon",
+    "industry": "E-commerce",
+    "location": "Gurugram, HR",
+    "domain": "amazon.com"
+  },
+  {
+    "id": 37,
+    "name": "Tata Consultancy Services",
+    "industry": "Technology",
+    "location": "Mumbai, MH, India",
+    "domain": "tcs.com",
+    "foundedYear": 1968,
+    "careerPage": "https://www.tcs.com/careers"
+  },
+  {
+    "id": 38,
+    "name": "Reliance Industries",
+    "industry": "Conglomerate",
+    "location": "Mumbai, MH, India",
+    "domain": "ril.com",
+    "foundedYear": 1966,
+    "careerPage": "https://careers.ril.com/"
+  },
+  {
+    "id": 39,
+    "name": "Infosys",
+    "industry": "Technology",
+    "location": "Bengaluru, KA, India",
+    "domain": "infosys.com",
+    "foundedYear": 1981,
+    "careerPage": "https://www.infosys.com/careers.html"
+  },
+  {
+    "id": 40,
+    "name": "HDFC Bank",
+    "industry": "Finance",
+    "location": "Mumbai, MH, India",
+    "domain": "hdfcbank.com",
+    "foundedYear": 1994,
+    "careerPage": "https://www.hdfcbank.com/personal/about-us/careers"
+  },
+  {
+    "id": 41,
+    "name": "Wipro",
+    "industry": "Technology",
+    "location": "Bengaluru, KA, India",
+    "domain": "wipro.com",
+    "foundedYear": 1945,
+    "careerPage": "https://careers.wipro.com/"
+  },
+  {
+    "id": 42,
+    "name": "ICICI Bank",
+    "industry": "Finance",
+    "location": "Mumbai, MH, India",
+    "domain": "icicibank.com",
+    "foundedYear": 1994,
+    "careerPage": "https://www.icicibank.com/careers"
+  },
+  {
+    "id": 43,
+    "name": "Sun Pharmaceutical",
+    "industry": "Healthcare",
+    "location": "Mumbai, MH, India",
+    "domain": "sunpharma.com",
+    "foundedYear": 1983,
+    "careerPage": "https://www.sunpharma.com/careers"
+  },
+  {
+    "id": 44,
+    "name": "Tata Motors",
+    "industry": "Automotive",
+    "location": "Mumbai, MH, India",
+    "domain": "tatamotors.com",
+    "foundedYear": 1945,
+    "careerPage": "https://www.tatamotors.com/careers"
+  },
+  {
+    "id": 45,
+    "name": "Flipkart",
+    "industry": "E-commerce",
+    "location": "Bengaluru, KA, India",
+    "domain": "flipkart.com",
+    "foundedYear": 2007,
+    "careerPage": "https://www.flipkartcareers.com/"
+  },
+  {
+    "id": 46,
+    "name": "Zomato",
+    "industry": "Food Tech",
+    "location": "Gurugram, HR, India",
+    "domain": "zomato.com",
+    "foundedYear": 2008,
+    "careerPage": "https://careers.zomato.com/"
+  },
+  {
+    "id": 47,
+    "name": "Paytm",
+    "industry": "Finance",
+    "location": "Noida, UP, India",
+    "domain": "paytm.com",
+    "foundedYear": 2010,
+    "careerPage": "https://paytm.com/careers"
+  },
+  {
+    "id": 48,
+    "name": "Cipla",
+    "industry": "Healthcare",
+    "location": "Mumbai, MH, India",
+    "domain": "cipla.com",
+    "foundedYear": 1935,
+    "careerPage": "https://www.cipla.com/careers"
+  },
+  {
+    "id": 49,
+    "name": "Adani Green Energy",
+    "industry": "Sustainability",
+    "location": "Ahmedabad, GJ, India",
+    "domain": "adanigreenenergy.com",
+    "foundedYear": 2015,
+    "careerPage": "https://www.adanigreenenergy.com/careers"
+  },
+  {
+    "id": 50,
+    "name": "Mahindra & Mahindra",
+    "industry": "Automotive",
+    "location": "Mumbai, MH, India",
+    "domain": "mahindra.com",
+    "foundedYear": 1945,
+    "careerPage": "https://www.mahindra.com/careers"
+  },
+  {
+    "id": 51,
+    "name": "Zerodha",
+    "industry": "Finance",
+    "location": "Bengaluru, KA, India",
+    "domain": "zerodha.com",
+    "foundedYear": 2010,
+    "careerPage": "https://zerodha.com/careers/"
+  },
+  {
+    "id": 52,
+    "name": "Dr. Reddy's Laboratories",
+    "industry": "Healthcare",
+    "location": "Hyderabad, TS, India",
+    "domain": "drreddys.com",
+    "foundedYear": 1984,
+    "careerPage": "https://www.drreddys.com/careers/"
+  },
+  {
+    "id": 53,
+    "name": "Swiggy",
+    "industry": "Food Tech",
+    "location": "Bengaluru, KA, India",
+    "domain": "swiggy.com",
+    "foundedYear": 2014,
+    "careerPage": "https://careers.swiggy.com/"
+  },
+  {
+    "id": 54,
+    "name": "Tata Power Solar",
+    "industry": "Sustainability",
+    "location": "Mumbai, MH, India",
+    "domain": "tatapowersolar.com",
+    "foundedYear": 1989,
+    "careerPage": "https://www.tatapowersolar.com/careers"
+  },
+  {
+    "id": 55,
+    "name": "Hindustan Unilever",
+    "industry": "FMCG",
+    "location": "Mumbai, MH, India",
+    "domain": "hul.co.in",
+    "foundedYear": 1931,
+    "careerPage": "https://www.hul.co.in/careers/"
+  },
+  {
+    "id": 56,
+    "name": "ITC Limited",
+    "industry": "FMCG",
+    "location": "Kolkata, WB, India",
+    "domain": "itcportal.com",
+    "foundedYear": 1910,
+    "careerPage": "https://www.itcportal.com/careers/"
+  },
+  {
+    "id": 57,
+    "name": "Ola Cabs",
+    "industry": "Mobility",
+    "location": "Bengaluru, KA, India",
+    "domain": "olacabs.com",
+    "foundedYear": 2010,
+    "careerPage": "https://www.olacabs.com/careers"
+  },
+  {
+    "id": 58,
+    "name": "Apollo Hospitals",
+    "industry": "Healthcare",
+    "location": "Chennai, TN, India",
+    "domain": "apollohospitals.com",
+    "foundedYear": 1983,
+    "careerPage": "https://www.apollohospitals.com/careers/"
+  },
+  {
+    "id": 59,
+    "name": "Zoho Corporation",
+    "industry": "Technology",
+    "location": "Chennai, TN, India",
+    "domain": "zohocorp.com",
+    "foundedYear": 1996,
+    "careerPage": "https://www.zoho.com/careers/"
+  },
+  {
+    "id": 60,
+    "name": "Google",
+    "industry": "Technology",
+    "location": "Mountain View, CA, USA",
+    "domain": "google.com",
+    "foundedYear": 1998,
+    "careerPage": "https://careers.google.com/"
+  },
+  {
+    "id": 61,
+    "name": "Apple",
+    "industry": "Technology",
+    "location": "Cupertino, CA, USA",
+    "domain": "apple.com",
+    "foundedYear": 1976,
+    "careerPage": "https://www.apple.com/careers/"
+  },
+  {
+    "id": 62,
+    "name": "Microsoft",
+    "industry": "Technology",
+    "location": "Redmond, WA, USA",
+    "domain": "microsoft.com",
+    "foundedYear": 1975,
+    "careerPage": "https://careers.microsoft.com/"
+  },
+  {
+    "id": 63,
+    "name": "Amazon",
+    "industry": "E-commerce",
+    "location": "Seattle, WA, USA",
+    "domain": "amazon.com",
+    "foundedYear": 1994,
+    "careerPage": "https://www.amazon.jobs/"
+  },
+  {
+    "id": 64,
+    "name": "JPMorgan Chase & Co.",
+    "industry": "Finance",
+    "location": "New York, NY, USA",
+    "domain": "jpmorganchase.com",
+    "foundedYear": 2000,
+    "careerPage": "https://careers.jpmorgan.com/"
+  },
+  {
+    "id": 65,
+    "name": "Johnson & Johnson",
+    "industry": "Healthcare",
+    "location": "New Brunswick, NJ, USA",
+    "domain": "jnj.com",
+    "foundedYear": 1886,
+    "careerPage": "https://www.jnj.com/careers"
+  },
+  {
+    "id": 66,
+    "name": "Tesla",
+    "industry": "Automotive",
+    "location": "Austin, TX, USA",
+    "domain": "tesla.com",
+    "foundedYear": 2003,
+    "careerPage": "https://www.tesla.com/careers"
+  },
+  {
+    "id": 67,
+    "name": "Coca-Cola",
+    "industry": "Food & Beverage",
+    "location": "Atlanta, GA, USA",
+    "domain": "coca-colacompany.com",
+    "foundedYear": 1892,
+    "careerPage": "https://www.coca-colacompany.com/careers"
+  },
+  {
+    "id": 68,
+    "name": "Netflix",
+    "industry": "Entertainment",
+    "location": "Los Gatos, CA, USA",
+    "domain": "netflix.com",
+    "foundedYear": 1997,
+    "careerPage": "https://jobs.netflix.com/"
+  },
+  {
+    "id": 69,
+    "name": "Salesforce",
+    "industry": "Technology",
+    "location": "San Francisco, CA, USA",
+    "domain": "salesforce.com",
+    "foundedYear": 1999,
+    "careerPage": "https://www.salesforce.com/company/careers/"
+  },
+  {
+    "id": 70,
+    "name": "Pfizer",
+    "industry": "Healthcare",
+    "location": "New York, NY, USA",
+    "domain": "pfizer.com",
+    "foundedYear": 1849,
+    "careerPage": "https://careers.pfizer.com/"
+  },
+  {
+    "id": 71,
+    "name": "ExxonMobil",
+    "industry": "Energy",
+    "location": "Irving, TX, USA",
+    "domain": "exxonmobil.com",
+    "foundedYear": 1999,
+    "careerPage": "https://jobs.exxonmobil.com/"
+  },
+  {
+    "id": 72,
+    "name": "HCLTech",
+    "industry": "Technology",
+    "location": "Noida, UP, India",
+    "domain": "hcltech.com",
+    "foundedYear": 1976,
+    "careerPage": "https://www.hcltech.com/careers"
+  },
+  {
+    "id": 73,
+    "name": "Capgemini India",
+    "industry": "Technology",
+    "location": "Mumbai, MH, India",
+    "domain": "capgemini.com",
+    "foundedYear": 1967,
+    "careerPage": "https://www.capgemini.com/in-en/careers/"
+  },
+  {
+    "id": 74,
+    "name": "Deloitte India",
+    "industry": "Consulting",
+    "location": "Mumbai, MH, India",
+    "domain": "deloitte.com",
+    "foundedYear": 1845,
+    "careerPage": "https://www.deloitte.com/in/en/careers.html"
+  },
+  {
+    "id": 75,
+    "name": "Accenture India",
+    "industry": "Consulting",
+    "location": "Bengaluru, KA, India",
+    "domain": "accenture.com",
+    "foundedYear": 1989,
+    "careerPage": "https://www.accenture.com/in-en/careers"
+  },
+  {
+    "id": 76,
+    "name": "Cognizant India",
+    "industry": "Technology",
+    "location": "Chennai, TN, India",
+    "domain": "cognizant.com",
+    "foundedYear": 1994,
+    "careerPage": "https://careers.cognizant.com/global/en"
   }
+
 ]
 

@@ -226,17 +226,32 @@ body {
 .company-location {
   color: var(--text-secondary);
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-founded-year {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-style: italic;
   margin-bottom: 1rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 .visit-btn {
-  width: 150px;
-  padding: 0.75rem 1rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
   background-color: white;
-  color: black;
+  color:black;
   border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -247,9 +262,31 @@ body {
 
 .visit-btn:hover:not(:disabled) {
   background-color: #3b38d4;
+  color:white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-  color:white;
+}
+
+.career-btn {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color:white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.career-btn:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .visit-btn:disabled,
@@ -258,6 +295,18 @@ body {
   cursor: not-allowed;
   opacity: 0.6;
   transform: none;
+}
+
+/* When both buttons are present, show them side by side on larger screens */
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+  }
+  
+  .visit-btn,
+  .career-btn {
+    flex: 1;
+  }
 }
 
 /* --- Loading, Error & No Results States --- */
