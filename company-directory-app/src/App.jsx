@@ -1,31 +1,31 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import companiesData from './companies.json';
-
-// Import the separated components
-import FilterControls from './components/FilterControls';
+import React, { useState, useEffect } from 'react';
 import CompanyList from './components/CompanyList';
-import { LoadingSpinner } from './components/StatusIndicators';
-import { ErrorMessage } from './components/StatusIndicators';
+import FilterControls from './components/FilterControls';
+import { LoadingSpinner, ErrorMessage } from './components/StatusIndicators';
+import Pagination from './components/Pagination'; // --- Import the new component
+import allCompanies from './companies.json';
 
-function App() {
-  // --- State Management ---
-  const [allCompanies, setAllCompanies] = useState([]);
+const App = () => {
+  const [companies, setCompanies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
-  const [filters, setFilters] = useState({
-    searchTerm: '',
-    industry: '',
-    location: '',
-    sortBy: 'name-asc',
-  });
 
-  // --- Data Fetching ---
+  const [searchTerm, setSearchTerm] = useState('');
+  const [locationFilter, setLocationFilter] = useState('');
+  const [industryFilter, setIndustryFilter] = useState('');
+
+  // --- New State for Pagination ---
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(9); // Show 6 companies per page
+
   useEffect(() => {
+    // Simulate API call
     const fetchData = () => {
       try {
+        setIsLoading(true);
+        // Simulate network delay
         setTimeout(() => {
-          setAllCompanies(companiesData);
+          setCompanies(allCompanies);
           setIsLoading(false);
         }, 1000);
       } catch (err) {
@@ -36,55 +36,60 @@ function App() {
     fetchData();
   }, []);
 
-  // --- Derived State & Logic ---
-  const uniqueIndustries = useMemo(() => [...new Set(allCompanies.map(c => c.industry))], [allCompanies]);
-  const uniqueLocations = useMemo(() => [...new Set(allCompanies.map(c => c.location))], [allCompanies]);
+  // --- Filter Logic ---
+  const filteredCompanies = companies.filter(company => {
+    return (
+      company.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (locationFilter === '' || company.location === locationFilter) &&
+      (industryFilter === '' || company.industry === industryFilter)
+    );
+  });
 
-  const filteredAndSortedCompanies = useMemo(() => {
-    let result = [...allCompanies];
+  // --- Reset to page 1 when filters change ---
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, locationFilter, industryFilter]);
 
-    result = result.filter(company => {
-      const nameMatch = company.name.toLowerCase().includes(filters.searchTerm.toLowerCase());
-      const industryMatch = filters.industry ? company.industry === filters.industry : true;
-      const locationMatch = filters.location ? company.location === filters.location : true;
-      return nameMatch && industryMatch && locationMatch;
-    });
+  // --- Pagination Calculation ---
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentCompanies = filteredCompanies.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredCompanies.length / itemsPerPage);
 
-    result.sort((a, b) => {
-      if (filters.sortBy === 'name-asc') {
-        return a.name.localeCompare(b.name);
-      } else {
-        return b.name.localeCompare(a.name);
-      }
-    });
+  const uniqueLocations = [...new Set(companies.map(c => c.location))];
+  const uniqueIndustries = [...new Set(companies.map(c => c.industry))];
 
-    return result;
-  }, [allCompanies, filters]);
-
-  // --- Rendering ---
   return (
-    <div className="App">
+    <div className="app-container">
       <header className="app-header">
         <h1>Company Directory</h1>
-        <p>Find and filter companies from our curated list.</p>
+        <p>Find and explore companies from various industries.</p>
       </header>
-      <main>
-        <FilterControls 
-          filters={filters} 
-          setFilters={setFilters} 
-          industries={uniqueIndustries} 
-          locations={uniqueLocations}
-        />
-        {isLoading && <LoadingSpinner />}
-        {error && <ErrorMessage message={error} />}
-        {!isLoading && !error && <CompanyList companies={filteredAndSortedCompanies} />}
-      </main>
-      <footer className="app-footer">
-        <p>Built by Akash Devireddy</p>
-      </footer>
+      <FilterControls
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        locationFilter={locationFilter}
+        setLocationFilter={setLocationFilter}
+        industryFilter={industryFilter}
+        setIndustryFilter={setIndustryFilter}
+        locations={uniqueLocations}
+        industries={uniqueIndustries}
+      />
+      {isLoading && <LoadingSpinner />}
+      {error && <ErrorMessage message={error} />}
+      {!isLoading && !error && (
+        <>
+          <CompanyList companies={currentCompanies} /> 
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;
 

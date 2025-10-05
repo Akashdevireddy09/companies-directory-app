@@ -148,6 +148,13 @@
     "domain": "flipkart.com"
   },
   {
+    "id": 36,
+    "name": "Amazon",
+    "industry": "E-commerce",
+    "location": "Gurugram, HR",
+    "domain": "amazon.com"
+  },
+  {
     "id": 22,
     "name": "Zomato",
     "industry": "Food Tech",
