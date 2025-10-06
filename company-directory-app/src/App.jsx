@@ -49,7 +49,7 @@ const App = () => {
       company.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (locationFilter === '' || company.location === locationFilter) &&
       (industryFilter === '' || company.industry === industryFilter)
-    );
+    );r
   });
 
   // --- Reset to page 1 when filters change ---
